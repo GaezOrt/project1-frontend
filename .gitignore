@@ -58,3 +58,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+yarn.lock
+android/local.properties.txt
+yarn.lock

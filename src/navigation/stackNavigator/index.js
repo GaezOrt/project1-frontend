@@ -16,7 +16,7 @@ const StackNavigator = () => {
   
 
   return (
-      <NavigationContainer theme={theme}>
+      <NavigationContainer >
         <StackNav.Navigator
           screenOptions={{
             headerStyle: {
