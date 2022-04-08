@@ -1,7 +1,5 @@
 import React from 'react';
 import StackNavigator from './src/navigation/stackNavigator';
-import { View, Text } from 'react-native';
-
 
 
 const App = () => {
@@ -9,6 +7,4 @@ const App = () => {
    <StackNavigator/>
   );
 };
-
-
 export default App;

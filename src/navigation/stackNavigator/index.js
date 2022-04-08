@@ -1,10 +1,7 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {
-  Login
-} from '../../screens';
-
+import {Login, Register} from '../../screens';
 
 const StackNav = createStackNavigator();
 
@@ -13,36 +10,41 @@ const StackNav = createStackNavigator();
  */
 
 const StackNavigator = () => {
-  
+  const saludo = '';
 
   return (
-      <NavigationContainer >
-        <StackNav.Navigator
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: '#012f75',
-              height: 70,
-            },
-            headerBackTitleStyle: {color: '#fff'},
-            headerTitleContainerStyle: {
-              paddingVertical: 10,
-              justifyContent: 'center',
-            },
-            headerTintColor: '#fff',
-            // eslint-disable-next-line react/display-name
-            headerBackTitle: 'Atras',
-            cardStyle: {backgroundColor: '#fff'},
-          }}
-        >
-            <>
-              <StackNav.Screen
-                name={'Login'}
-                options={{headerShown: false}}
-                component={Login}
-              />
-            </>
-        </StackNav.Navigator>
-      </NavigationContainer>
+    <NavigationContainer>
+      <StackNav.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#012f75',
+            height: 70,
+          },
+          headerBackTitleStyle: {color: '#fff'},
+          headerTitleContainerStyle: {
+            paddingVertical: 10,
+            justifyContent: 'center',
+          },
+          headerTintColor: '#fff',
+          // eslint-disable-next-line react/display-name
+          headerBackTitle: saludo,
+          cardStyle: {backgroundColor: '#fff'},
+        }}>
+        <>
+          <StackNav.Screen
+            name={'login'}
+            options={{headerShown: true}}
+            component={Login}
+          />
+
+          <StackNav.Screen
+            name={'register'}
+            options={{headerShown: true}}
+            component={Register}
+          />
+        </>
+      </StackNav.Navigator>
+    </NavigationContainer>
   );
 };
 
