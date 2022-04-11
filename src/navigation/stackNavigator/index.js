@@ -33,7 +33,7 @@ const StackNavigator = () => {
         <>
           <StackNav.Screen
             name={'login'}
-            options={{headerShown: true}}
+            options={{headerShown: false}}
             component={Login}
           />
 
