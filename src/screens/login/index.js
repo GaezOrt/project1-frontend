@@ -39,6 +39,7 @@ const Login = () => {
           Alert.alert(res.data.error)
         }else{
           Alert.alert('Logged in succesfully')
+          navigation.navigate('index');
         }
       })
 

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {Login, Register} from '../../screens';
+import {Index, Login, Register} from '../../screens';
 
 const StackNav = createStackNavigator();
 
@@ -42,6 +42,13 @@ const StackNavigator = () => {
             options={{headerShown: true}}
             component={Register}
           />
+          
+          <StackNav.Screen
+            name={'index'}
+            options={{headerShown: false}}
+            component={Index}
+          />
+
         </>
       </StackNav.Navigator>
     </NavigationContainer>
