@@ -31,6 +31,11 @@ const StackNavigator = () => {
           cardStyle: {backgroundColor: '#fff'},
         }}>
         <>
+        <StackNav.Screen
+            name={'index'}
+            options={{headerShown: false}}
+            component={Index}
+          />
           <StackNav.Screen
             name={'login'}
             options={{headerShown: false}}
@@ -43,11 +48,7 @@ const StackNavigator = () => {
             component={Register}
           />
           
-          <StackNav.Screen
-            name={'index'}
-            options={{headerShown: false}}
-            component={Index}
-          />
+         
 
         </>
       </StackNav.Navigator>

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {
-  View,
-  Text,
+  Image,
   StyleSheet,
   StatusBar,
   FlatList,
@@ -23,10 +22,13 @@ const Index = () => {
 
   return (
     <ScrollView>
-      <FlatList
-        
+      <FlatList style={styles.list}
+        horizontal={true}
         data={listData}
-        renderItem={({item}) => <Text style={styles.item}>{item.name}</Text>}
+        renderItem={({item}) => <Image style={styles.tinyLogo}
+        source={{
+          uri: item.link,
+        }}/>}
       />
     </ScrollView>
   );
@@ -35,6 +37,11 @@ const Index = () => {
 export default Index;
 
 const styles = StyleSheet.create({
+  tinyLogo: {
+    width: 250,
+    height: 250,
+    marginRight:15
+  },
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
@@ -44,6 +51,10 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
+  },
+  list:{
+    alignSelf:'center',
+    textAlign: 'center',
   },
   title: {
     fontSize: 32,
